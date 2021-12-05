@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <style>
+        .button {
+            display: inline-block;
+            border-radius: 4px;
+            background-color: yellow;
+            border: none;
+            color: #FFFFFF;
+            text-align: center;
+            font-size: 28px;
+            padding: 20px;
+            width: 200px;
+            transition: all 0.5s;
+            cursor: pointer;
+            margin: 5px;
+            border: 2px solid white;
+        }
+        
+        .button span {
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: 0.5s;
+        }
+        
+        .button span:after {
+            content: '\00bb';
+            position: absolute;
+            opacity: 0;
+            top: 0;
+            right: -20px;
+            transition: 0.5s;
+        }
+        
+        .button:hover span {
+            padding-right: 25px;
+        }
+        
+        .button:hover span:after {
+            opacity: 1;
+            right: 0;
+        }
+        
+        .topright {
+            position: absolute;
+            top: 8px;
+            right: 16px;
+            font-size: 18px;
+        }
+    </style>
+    <link rel="stylesheet" href="inside-game.css">
+    <title>Let's Play </title>
+</head>
+
+<body>
+    <button class=" button topright" style="vertical-align:middle;"><span><a href="/games.html" style="text-decoration: none; font-size: large;">Back home</a> </span></button>
+    <div class="container">
+
+        <div class="my-game-body col-md-9">
+            <!-- <div class="pyro">
+                <div class="before"></div>
+                <div class="after"></div>
+            </div> -->
+            <h3 id="forAlert"></h3>
+            <div class="row">
+                <div class="col-md-3 left-hant">
+                    <h3 class="text-center">You</h3>
+                    <img src="../images/rock.png" id="left-hand__image" width="100%">
+                </div>
+                <div class="col-md-6 d-flex justify-content-center game-body">
+                    <h3 class="text-center">SCORE</h3>
+                    <div class="game-body__score">
+                        <span id="leftScore">0</span>
+                        <span> - </span>
+                        <span id="rightScore">0</span>
+                    </div>
+                </div>
+                <div class="col-md-3 right-hand">
+                    <h3 class="text-center">CPU</h3>
+
+                    <img src="../images/rock.png" id="right-hand__image" width="100%">
+                </div>
+                <div class="col-md-12 mt-5 forChoose  d-flex justify-content-around">
+                    <h3 class="text-center ">choose </h3>
+                    <div class="forChoose__my-game-body__choose col-md-12 d-flex justify-content-around"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- sweet alert -->
+
+    <script src="inside-game.js"></script>
+</body>
+
+</html>

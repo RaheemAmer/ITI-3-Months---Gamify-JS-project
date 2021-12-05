@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="inside-game2.css">
+    <title>BreakOut</title>
+</head>
+<style>
+    .button {
+        display: inline-block;
+        border-radius: 4px;
+        background-color: #FFFFFF;
+        border: none;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 28px;
+        padding: 20px;
+        width: 150px;
+        transition: all 0.5s;
+        cursor: pointer;
+        margin: 5px;
+        border: 2px solid black;
+    }
+    
+    .button span {
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: 0.5s;
+    }
+    
+    .button span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+    
+    .button:hover span {
+        padding-right: 25px;
+    }
+    
+    .button:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
+</style>
+</style>
+
+<body>
+    <h1>BreakOut</h1>
+    <span id="score">0</span>
+
+    <div id="game-body">
+    </div>
+
+    <button onclick="startGame()">start</button>
+    <br>
+    <button class="button" style="vertical-align:middle;"><span><a href="/games.html" style="text-decoration: none; font-size: large;">Back home</a> </span></button>
+
+    <script src="inside-game2.js"></script>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+</body>
+
+</html>
